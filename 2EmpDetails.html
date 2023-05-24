@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>employee details</title>
+    </head>
+    <body>
+        
+            <form>
+                <table border="1" style="background-color: hsla(227, 62%, 56%, 0.888);">
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" name="nm" id="nm" required autofocus maxlength="5"></td>
+                    </tr>
+                    <tr>
+                        <td>Employee code</td>
+                        <td><input type="text" name="code" id="code" minlength="3"></td>
+                    </tr>
+                    <tr>
+                        <td>Department</td>
+                        <td><input type="radio" name="Dept" id="admin" value="admin"><label for="admin">ADMIN</label><br>
+                            <input type="radio" name="Dept" id="hr" value="hr"><label for="hr">HR</label><br>
+                            <input type="radio" name="Dept" id="tech" value="tech"><label for="tech">TECHNICAL</label><br>
+                            <input type="radio" name="Dept" id="acc" value="acc"><label for="acc">ACCOUNT</label>
+                        </td>
+                    </tr> 
+                    <tr>
+                        <td>Date of joining</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>    
+                        <td>Address</td> 
+                        <td><textarea name="Address" id="Address" rows="3" cols="20"></textarea></td> 
+                    </tr> 
+                    <tr>
+                        <td>training Program Attended </td>
+                        <td><input type="checkbox" name="skill" id="HTML" value="HTML"><label for="HTML">HTML</label></br>
+                            <input type="checkbox" name="skill" id="java" value="java"><label for="java">JAVA</label></br>
+                            <input type="checkbox" name="skill" id="CLIENT SERVER" value="CLIENT SERVER"><label for="CLIENT SERVER">CLIENT SERVER</label></br>
+                            <input type="checkbox" name="skill" id=".NET" value=".NET"><label for=".NET">.NET</label></br>
+                        </td>
+                    </tr>    
+                    <tr>
+                            <td><label>Program need to attended</label></td>
+                            <td> <select name="prog" id="prog">
+                             <option value="text">---Select option---</option>
+                             <option value="HTML">HTML</option>
+                             <option value="JAVA">JAVA</option>
+                             <option value="DATA BASES">DATA BASES</option>
+                          </select></td>
+                    </tr>
+                    <tr>
+                        <td>Send the info at</td>
+                        <td><a href="mailto:lokeshchaudhari7083@gmail.com">mailus</a></td>
+                    </tr>  
+                    <tr>
+                        <td colspan="2" align="center"><button type="submit" name="btn" id="btn" value="submit">submit</button></td>
+                    </tr>
+                </table>
+
+            </form>    
+    </body>
+</html>
