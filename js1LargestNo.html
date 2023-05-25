@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <h1>Largest Number</h1>
+    <script>
+        function largest() {
+            var a = parseInt(document.getElementById('n1').value);
+            var b = parseInt(document.getElementById('n2').value);
+            var c = parseInt(document.getElementById('n3').value);
+            if (a > b & a > c) {
+                largest = a;
+
+            } else {
+                if (b > a & b > c) {
+                    largest = b;
+
+                } else {
+                    largest = c;
+
+                }
+
+            }
+            document.getElementById("result").innerHTML = "Largest No : " + largest;
+
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Enter first number : <input type="text" name="num1" id="n1"><br>
+        Enter Second number &nbsp;: <input type="text" name="num2" id="n2"><br>
+        Enter Third number : <input type="text" name="num3" id="n3"><br>
+
+        <button type="button" name="lar" id="lar" onclick="largest()">Get Largest</button>
+        <div id="result"></div>
+    </form>
+</body>
+
+</html>
