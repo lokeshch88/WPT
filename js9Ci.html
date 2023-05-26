@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <hr>
+    <h3>Calculate Compound Interest</h3>
+    <hr>
+    <script>
+        function calcomp(){
+            var p=parseInt(document.getElementById('p1').value);
+            var r=parseInt(document.getElementById('r1').value);
+            var n=parseInt(document.getElementById('pr1').value);
+            
+            let amt=p*(Math.pow((1+r/100),n));
+            let ci=(amt-p).toFixed(2);
+            //document.write(ci);
+            document.getElementById("result").value=ci;
+            document.getElementById("divresult").innerHTML = ci;
+        }
+    </script>
+    </head>
+    <body>
+        Principal Amount: <input type="text" name="princ" id="p1"><br>
+        Rate of interest: &ensp; &nbsp;<input type="text" name="rate" id="r1"><br>
+        Period: &ensp; &nbsp;&ensp; &nbsp;&ensp; &nbsp;&ensp; &nbsp;&ensp;<input type="text" name="per" id="pr1"><br>
+
+        <button type="button" name="btn" id="btn" value="comp" onclick="calcomp()">Calculate</button><br>
+        Compound Interest: <input type="text" name="res" id="result" disabled>
+
+        <div id="divresult"></div>
+    </body>
+</html>
