@@ -1,0 +1,107 @@
+
+<html>
+    <head>
+        <script>
+            function daydiff(){
+                var diff=last.getTime()-d.getTime();
+                var daydiff=diff/(3600000*24);
+                //document.write(daydiff)
+                document.getElementById("result").innerHTML=daydiff
+                
+            }
+            function displayday(){
+                switch(day){
+                    case 0:
+                        return "Sunday"
+                        break;
+                        case 1:
+                        return "Monday"
+                        break;
+                        case 2:
+                        return "Tuesday"
+                        break;
+                        case 3:
+                        return "Wednesday"
+                        break;
+                        case 4:
+                        return "Thursday"
+                        break;
+                        case 5:
+                        return "Friday"
+                        break;
+                        case 6:
+                        return "Saturday"
+                        break;
+                }
+            }
+            function displaymonth(){
+                switch(mm){
+                    case 0:
+                        return "January"
+                        break;
+                        case 1:
+                        return "February"
+                        break;
+                        case 2:
+                        return "March"
+                        break;
+                        case 3:
+                        return "April"
+                        break;
+                        case 4:
+                        return "May"
+                        break;
+                        case 5:
+                        return "June"
+                        break;
+                        case 6:
+                        return "July"
+                        break;
+                        case 7:
+                        return "August"
+                        break;
+                        case 8:
+                        return "September"
+                        break;
+                        case 9:
+                        return "October"
+                        break;
+                        case 10:
+                        return "November"
+                        break;
+                        case 11:
+                        return "December"
+                        break;
+            }
+        }
+            function msg(){
+                var h=d.getHours();
+                if(h>0 & h<12){
+                    return "Good Morning to you"
+                }else if(h>12 & h<18){
+                    return "Good Afternoon to you"
+                }else{
+                    return "Good Evening to you"
+                }
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <script>
+           //const weekday=[Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday]
+        var d= new Date();
+        var last=new Date(2023,12,31);
+        var day=d.getDay();
+        var dd= d.getDate();
+        var mm =d.getMonth();
+        var y=d.getFullYear();
+        document.write("Today is "+displayday(day)+", "+dd+" "+displaymonth(mm)+" "+y+ ", Welcome, and "+msg());
+
+        </script>
+        <div id="result"></div>
+        <!-- Days left for year end: daydiff(); -->
+
+    </body>
+</html>
