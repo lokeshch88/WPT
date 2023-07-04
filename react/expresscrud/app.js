@@ -6,7 +6,7 @@ const router=require('./router/routers.js')
 //add middlewares
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json())
-//configure the application
+
 //CORS settings
 app.use(function(req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
